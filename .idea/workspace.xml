@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49f8312f-a60f-493d-8ee8-f3b14562a465" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gettingstarted/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gettingstarted/settings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gettingstarted/static/humans.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gettingstarted/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gettingstarted/wsgi.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello/admin.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello/static/lang-logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello/templates/base.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello/templates/db.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello/templates/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello/tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello/views.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-    </list>
+    <list default="true" id="49f8312f-a60f-493d-8ee8-f3b14562a465" name="Default" comment="" />
     <ignored path="portfoliobox.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
