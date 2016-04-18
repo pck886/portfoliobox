@@ -13,15 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-import common
-from django.conf.urls import url
+import common.views
+import django.contrib.auth.views
+import registration.views
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    url(r'^accounts/login/', 'django.contrib.auth.views.login', name='login', kwargs={'template_name': 'login.html'}),
-    url(r'^accounts/logout/', 'django.contrib.auth.views.logout', name='logout',kwargs={'next_page': '/accounts/login/'}),
-    url(r'^signup/$', 'registration.modelForm.signup', name='signup'),
-    url(r'^signup_ok/$', TemplateView.as_view(template_name='registration/sigup_ok.html'), name='signup_ok'),
     url(r'^admin/', admin.site.urls),
+    url(r'^$', common.views.home, name='home'),
+    # session
+    url(r'^login/$', django.contrib.auth.views.login, name='login_url'),
+    url(r'^logout/$', django.contrib.auth.views.logout, kwargs={'next_page': '/login/'}, name='logout_url'),
+    url(r'^signup/$', registration.views.signup, name='signup'),
+    url(r'^signup_ok/$', TemplateView.as_view(template_name='registration/templates/signup_ok.html'), name='signup_ok'),
+    url(r'', include('social.apps.django_app.urls', namespace='social')),
+
 ]

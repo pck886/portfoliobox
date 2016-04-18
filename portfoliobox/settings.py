@@ -62,7 +62,13 @@ TEMPLATES = [
             'debug': True,
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
                 'social.apps.django_app.context_processors.backends',
                 'social.apps.django_app.context_processors.login_redirect'
             ],
