@@ -8,3 +8,10 @@ def home(request):
     """
     # Pagination
     return render(request, "index.html")
+
+def introduce(request):
+    """introduce
+        to view top articles
+        """
+    # Pagination
+    return render(request, "introduce.html")

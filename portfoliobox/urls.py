@@ -23,6 +23,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', common.views.home, name='home'),
+    url(r'^introduce$', common.views.introduce, name='introduce'),
     # session
     url(r'^login/$', django.contrib.auth.views.login, name='login_url'),
     url(r'^logout/$', django.contrib.auth.views.logout, kwargs={'next_page': '/login/'}, name='logout_url'),
