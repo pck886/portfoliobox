@@ -178,3 +178,8 @@ STATICFILES_DIRS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+# Use email addresses for user name
+AUTHENTICATION_BACKENDS = (
+    'common.accounts.backends.EmailBackend',
+)

@@ -83,6 +83,7 @@
                                 <div class="error"></div>
                                 <div class="form loginBox">
                                     <form method="post" action="{% url 'login_url' %}" accept-charset="UTF-8">
+                                        {% csrf_token %}
                                         <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                         <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                         <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
@@ -94,6 +95,7 @@
                             <div class="content registerBox" style="display:none;">
                                 <div class="form">
                                     <form method="post" html="{:multipart=>true}" data-remote="true" action="{% url 'signup' %}" accept-charset="UTF-8">
+                                        {% csrf_token %}
                                         <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                         <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                         <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
@@ -118,7 +120,7 @@
             </div>
         </div>
     </div>
-    <!-- /.Modal -->
+    <!-- /.Login Modal -->
 </div>
 
 <!-- Page Header -->

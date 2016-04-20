@@ -10,8 +10,9 @@ def signup(request):
 
         if userform.is_valid():
             userform.save()
+            return HttpResponseRedirect(reverse("signup_ok"))
 
-        return HttpResponseRedirect(reverse("signup_ok"))
+        return HttpResponseRedirect(reverse("home"))
 
     elif request.method == "GET":
         userform = UserCreationForm()
