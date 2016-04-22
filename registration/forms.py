@@ -1,23 +1,67 @@
+"""
+Forms and validation code for user registration.
+Note that all of these forms assume Django's bundle default ``User``
+model; since it's not possible for a form to anticipate in advance the
+needs of custom user models, you will need to write your own forms if
+you're using a custom model.
+"""
+
+
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth.models import User
+from django.utils.translation import ugettext_lazy as _
+from django.contrib.auth.forms import UserCreationForm
+
+from .users import UserModel, UsernameField
+
+User = UserModel()
 
 
-class Email(forms.EmailField):
-    def clean(self, value):
-        super(Email, self).clean(value)
-        try:
-            User.objects.get(email=value)
-            raise forms.ValidationError("This email is already registered. Use the 'forgot password' link on the login page")
-        except User.DoesNotExist:
-            return value
+class RegistrationForm(UserCreationForm):
+    """
+    Form for registering a new user account.
+    Validates that the requested username is not already in use, and
+    requires the password to be entered twice to catch typos.
+    Subclasses should feel free to add any additional validation they
+    need, but should avoid defining a ``save()`` method -- the actual
+    saving of collected user data is delegated to the active
+    registration backend.
+    """
+    required_css_class = 'required'
+    email = forms.EmailField(label=_("E-mail"))
 
-class UserSignUpForm(forms.Form):
-    password1 = forms.CharField(widget=forms.PasswordInput(), label="Password")
-    password2 = forms.CharField(widget=forms.PasswordInput(), label="Repeat your password")
+    class Meta:
+        model = User
+        fields = (UsernameField(), "email")
 
-    #email will be becomeusername
-    email = Email()
 
-    def clean_password(self):
-        return
+class RegistrationFormTermsOfService(RegistrationForm):
+    """
+    Subclass of ``RegistrationForm`` which adds a required checkbox
+    for agreeing to a site's Terms of Service.
+    """
+    tos = forms.BooleanField(widget=forms.CheckboxInput,
+                             label=_('I have read and agree to the Terms of Service'),
+                             error_messages={'required': _("You must agree to the terms to register")})
+
+
+class RegistrationFormUniqueEmail(RegistrationForm):
+    """
+    Subclass of ``RegistrationForm`` which enforces uniqueness of
+    email addresses.
+    """
+    bad_domains = ['aim.com', 'aol.com', 'email.com', 'gmail.com',
+                   'googlemail.com', 'hotmail.com', 'hushmail.com',
+                   'msn.com', 'mail.ru', 'mailinator.com', 'live.com',
+                   'yahoo.com']
+
+    def clean_email(self):
+        """
+        Check the supplied email address against a list of known free
+        webmail domains.
+        """
+        email_domain = self.cleaned_data['email'].split('@')[1]
+
+        if email_domain in self.bad_domains:
+            raise forms.ValidationError(_("Registration using free email addresses is prohibited, Please supply a different email address."))
+
+        return self.cleaned_data['email']

@@ -27,7 +27,7 @@ urlpatterns = [
     # session
     url(r'^login/$', django.contrib.auth.views.login, name='login_url'),
     url(r'^logout/$', django.contrib.auth.views.logout, kwargs={'next_page': '/login/'}, name='logout_url'),
-    url(r'^signup/$', registration.views.signup, name='signup'),
+    #url(r'^signup/$', registration.views.signup, name='signup'),
     url(r'^signup_ok/$', TemplateView.as_view(template_name='registration/templates/signup_ok.html'), name='signup_ok'),
     url(r'', include('social.apps.django_app.urls', namespace='social')),
 
