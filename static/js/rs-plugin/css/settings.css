@@ -721,8 +721,8 @@ text-decoration:none;
 background-color:rgba(235, 235, 235, 1);
 width:370px;
 height:3px;
-background-position:initial initial;
-background-repeat:initial initial;
+/*background-position:initial initial;*/
+/*background-repeat:initial initial;*/
 border-width:0px;
 border-color:rgb(34, 34, 34);
 border-style:none;
