@@ -1,10 +1,12 @@
+# -*- coding: utf-8 -*-
+
 import datetime
 import re
 import random
 import hashlib
 
 from django.conf import settings
-from django.core.exceptions import ObjectDoesNotExist
+from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.core.mail import EmailMultiAlternatives
 from django.db import models, transaction
 from django.template import RequestContext, TemplateDoesNotExist
@@ -80,13 +82,13 @@ class RegistrationManager(models.Manager):
     def create_inactive_user(self, site, new_user=None, send_email=True,
                              request=None, profile_info={}, **user_info):
         """
-        Create a new, inactive ``User``, generate a
-        ``RegistrationProfile`` and email its activation key to the
-        ``User``, returning the new ``User``.
-        By default, an activation email will be sent to the new
-        user. To disable this, pass ``send_email=False``.
-        Additionally, if email is sent and ``request`` is supplied,
-        it will be passed to the email template.
+        새로운 비활성``User``를 생성하는 생성
+         ``RegistrationProfile``과에 정품 인증 키를 이메일로
+         ``User``, 반환 새로운``User``.
+         기본적으로 활성화 이메일이 새로 전송됩니다
+         사용자. 이을 사용하지 않으려면의 send_email = False````전달합니다.
+         또한, 이메일이 전송되고`request``가 공급되면
+         그것은 이메일 템플릿에 전달됩니다.
         """
         if new_user is None:
             password = user_info.pop('password')
@@ -183,16 +185,16 @@ class RegistrationManager(models.Manager):
 @python_2_unicode_compatible
 class RegistrationProfile(models.Model):
     """
-    A simple profile which stores an activation key for use during
-    user account registration.
-    Generally, you will not want to interact directly with instances
-    of this model; the provided manager includes methods
-    for creating and activating new accounts, as well as for cleaning
-    out accounts which have never been activated.
-    While it is possible to use this model as the value of the
-    ``AUTH_PROFILE_MODULE`` setting, it's not recommended that you do
-    so. This model's sole purpose is to store data temporarily during
-    account registration and activation.
+    사용하기 위해 활성화 키를 저장하는 간단한 프로필
+     사용자 계정 등록.
+     일반적으로, 인스턴스와 직접 상호 작용하지 않습니다
+     모델; 제공된 관리자는 방법을 포함한다
+     청소뿐만 아니라, 새로운 계정을 생성 및 활성화
+     활성화 된 적이없는 아웃 계정.
+     그것이 가능하지만의 값으로,이 모델을 사용
+     ``AUTH_PROFILE_MODULE`` 설정, 당신이하지 않는 것이 좋습니다
+     그래서. 이 모델의 목적은 동안 데이터를 일시적으로 저장하는 것이다
+     계정 등록 및 활성화.
     """
     user = models.OneToOneField(
         UserModelString(),
@@ -257,59 +259,59 @@ class RegistrationProfile(models.Model):
 
     def send_activation_email(self, site, request=None):
         """
-        Send an activation email to the user associated with this
-        ``RegistrationProfile``.
-        The activation email will use the following templates,
-        which can be overriden by setting ACTIVATION_EMAIL_SUBJECT,
-        ACTIVATION_EMAIL_BODY, and ACTIVATION_EMAIL_HTML appropriately:
-        ``registration/activation_email_subject.txt``
-            This template will be used for the subject line of the
-            email. Because it is used as the subject line of an email,
-            this template's output **must** be only a single line of
-            text; output longer than one line will be forcibly joined
-            into only a single line.
-        ``registration/activation_email.txt``
-            This template will be used for the text body of the email.
-        ``registration/activation_email.html``
-            This template will be used for the html body of the email.
-        These templates will each receive the following context
-        variables:
-        ``user``
-            The new user account
-        ``activation_key``
-            The activation key for the new account.
-        ``expiration_days``
-            The number of days remaining during which the account may
-            be activated.
-        ``site``
-            An object representing the site on which the user
-            registered; depending on whether ``django.contrib.sites``
-            is installed, this may be an instance of either
-            ``django.contrib.sites.models.Site`` (if the sites
-            application is installed) or
-            ``django.contrib.sites.requests.RequestSite`` (if
-            not). Consult the documentation for the Django sites
-            framework for details regarding these objects' interfaces.
-        ``request``
-            Optional Django's ``HttpRequest`` object from view.
-            If supplied will be passed to the template for better
-            flexibility via ``RequestContext``.
+        이과 관련된 사용자에게 활성화 이메일 보내기
+        ``RegistrationProfile``.
+        활성화 이메일은 다음 템플릿을 사용합니다,
+        ACTIVATION_EMAIL_SUBJECT 설정하여 오버라이드 (override) 할 수있는,
+        적절하게 ACTIVATION_EMAIL_BODY 및 ACTIVATION_EMAIL_HTML :
+        ``등록 / activati​​on_email_subject.txt``
+            이 템플릿의 제목란에 사용될
+            이메일. 이 전자 메일의 제목 라인으로 사용되므로
+            이 템플릿의 출력 ** 필수의 **이 될 만 한 줄
+            본문; 한 줄 이상 출력은 강제적으로 가입됩니다
+            단 하나의 라인으로.
+        ``등록 / activati​​on_email.txt``
+            이 템플릿은 이메일의 텍스트 본문에 사용된다.
+        ``등록 / activati​​on_email.html``
+            이 템플릿은 이메일의 HTML 바디를 위해 사용될 것이다.
+        이러한 템플릿은 각각 다음과 같은 컨텍스트를 받게됩니다
+        변수:
+        ``user``
+            새 사용자 계정
+        ``activati​​on_key``
+            새 계정의 활성화 키.
+        ``expiration_days``
+            남은 일 수있는 계정이 수도 중
+            활성화 될 수있다.
+        ``site``
+            사이트를 나타내는 개체하는 사용자에
+            등기; ``django.contrib.sites`` 여부에 따라
+            설치되어,이 인스턴스가 될 수도 있고
+            ``django.contrib.sites.models.Site`` (경우 사이트
+            응용 프로그램이 설치된) 또는
+            ``django.contrib.sites.requests.RequestSite`` (있는 경우
+            아니). 장고 사이트에 대한 설명서를 참조하십시오
+            이 객체의 인터페이스에 대한 자세한 내용은 프레임 워크입니다.
+        ``request``
+            옵션 장고의``HttpRequest`` 뷰에서 객체입니다.
+            더 나은 템플릿에 전달됩니다 제공하는 경우
+            RequestContext````을 통해 유연성을 제공합니다
         """
         activation_email_subject = getattr(settings, 'ACTIVATION_EMAIL_SUBJECT',
-                                           'registration/activation_email_subject.txt')
+                                           'registration/email/activation_email_subject.txt')
         activation_email_body = getattr(settings, 'ACTIVATION_EMAIL_BODY',
-                                        'registration/activation_email.txt')
+                                        'registration/email/activation_email.txt')
         activation_email_html = getattr(settings, 'ACTIVATION_EMAIL_HTML',
-                                        'registration/activation_email.html')
+                                        'registration/email/activation_email.html')
 
         ctx_dict = {}
 
         if request is not None:
             ctx_dict = RequestContext(request, ctx_dict)
-            # update ctx_dict after RequestContext is created
-            # because template context processors
-            # can overwrite some of the values like user
-            # if django.contrib.auth.context_processors.auth is used
+            """ RequestContext 후 업데이트 ctx_dict가 만들어집니다
+              템플릿 상황에 맞는 프로세서 때문에
+              사용자와 같은 값의 일부를 덮어 쓸 수 있습니다
+              django.contrib.auth.context_processors.auth를 사용"""
             ctx_dict.update({
                 'user': self.user,
                 'activation_key': self.activation_key,
@@ -339,3 +341,19 @@ class RegistrationProfile(models.Model):
                     email_message.attach_alternative(message_html, 'text/html')
 
             email_message.send()
+
+
+
+def get_or_none(model, order=None, **kwargs):
+    try:
+        return model.objects.get(**kwargs)
+    except MultipleObjectsReturned as e:
+        if order == "-":
+            res = model.objects.filter(**kwargs).order_by("-id")
+        else:
+            res = model.objects.filter(**kwargs).order_by("-id")
+        if res:
+            return res[0]
+        return None
+    except Exception as e:
+        return None

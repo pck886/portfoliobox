@@ -1,5 +1,8 @@
+coveralls
 dj-database-url==0.4.0
 Django==1.9.2
+docutils==0.12
+flake8
 gunicorn==19.4.5
 oauthlib==1.0.3
 psycopg2==2.6.1
@@ -9,6 +12,9 @@ python-social-auth==0.2.16
 requests==2.9.1
 requests-oauthlib==0.6.1
 setuptools==20.7.0
+Sphinx
+signals==0.0.2
 six==1.10.0
+invoke==0.12.2
 wheel==0.29.0
 whitenoise==2.0.6

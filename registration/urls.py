@@ -11,4 +11,4 @@ import warnings
 warnings.warn("include('registration.urls') is deprecated; use include('registration.backends.default.urls') instead.",
               DeprecationWarning)
 
-from .backends.default.url import * # NOQA
+from .backends.default.urls import * # NOQA

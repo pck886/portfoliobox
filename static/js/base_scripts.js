@@ -138,6 +138,23 @@ var appMaster = {
     placeHold: function(){
         // run Placeholdem on all elements with placeholders
         Placeholdem(document.querySelectorAll('[placeholder]'));
+    },
+
+    getCookie: function (name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = $.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
     }
 
 }; // AppMaster
@@ -151,13 +168,13 @@ $(document).ready(function() {
 
     // 스크린샷
     appMaster.screensCarousel();
-    
+
     // 애니메이션 효과
     appMaster.animateScript();
-    
+
     // 슬라이드 사진
     // appMaster.revSlider();
-    
+
     // TOP 메뉴 스크롤
     appMaster.scrollMenu();
     //

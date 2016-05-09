@@ -153,7 +153,6 @@ USE_L10N = True
 USE_TZ = True
 
 
-
 # Update database configuration with $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
@@ -181,5 +180,22 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Use email addresses for user name
 AUTHENTICATION_BACKENDS = (
-    'common.accounts.backends.EmailBackend',
+    'common.accounts.backends.EmailBackend.EmailOrUsernameModelBackend',
+    'django.contrib.auth.backends.ModelBackend'
 )
+
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_EMAIL_SUBJECT_PREFIX = '[Registration PortfolioBox]'
+SEND_ACTIVATION_EMAIL = True
+REGISTRATION_AUTO_LOGIN = False
+
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'pck886@naver.com'
+EMAIL_HOST = 'smtp.naver.com'
+EMAIL_HOST_USER = 'pck886'
+EMAIL_HOST_PASSWORD = 'cksrudQhd8724'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
