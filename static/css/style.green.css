@@ -152,7 +152,7 @@ UNIVERSAL SECTION STYLES
   -webkit-backface-visibility: hidden;
 }
 .text-parallax.parallax-image1 {
-  background: url('../../templates/portfolio/img/parallax.jpg') center center no-repeat fixed;
+  background: url('../img/parallax.jpg') center center no-repeat fixed;
 }
 @media (max-width: 991px) {
   .text-parallax {
