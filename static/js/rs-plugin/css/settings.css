@@ -721,8 +721,8 @@ text-decoration:none;
 background-color:rgba(235, 235, 235, 1);
 width:370px;
 height:3px;
-/*background-position:initial initial;*/
-/*background-repeat:initial initial;*/
+background-position:initial initial;
+background-repeat:initial initial;
 border-width:0px;
 border-color:rgb(34, 34, 34);
 border-style:none;
@@ -1752,7 +1752,7 @@ border-style:none;
 
 
 
-.tp-transparentimg {	content:"url(../assets/transparent.png)"}
+.tp-transparentimg {	content:"url(../assets/transparent.jpg)"}
 .tp-3d				{	-webkit-transform-style: preserve-3d;
 						 -webkit-transform-origin: 50% 50%;
 					}

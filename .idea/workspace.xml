@@ -65,8 +65,8 @@
       <file leaf-file-name="settings-ie8.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/rs-plugin/css/settings-ie8.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="501" column="37" selection-start-line="501" selection-start-column="37" selection-end-line="501" selection-end-column="37" />
+            <state relative-caret-position="372">
+              <caret line="809" column="58" selection-start-line="809" selection-start-column="47" selection-end-line="809" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -75,8 +75,8 @@
       <file leaf-file-name="settings.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/rs-plugin/css/settings.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="725" column="17" selection-start-line="725" selection-start-column="17" selection-end-line="725" selection-end-column="17" />
+            <state relative-caret-position="193">
+              <caret line="1754" column="62" selection-start-line="1754" selection-start-column="62" selection-end-line="1754" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -411,19 +411,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\python_project\portfoliobox\templates\portfolio" />
-      <recent name="C:\python_project\portfoliobox\templates\registration" />
-      <recent name="C:\python_project\portfoliobox\static" />
-      <recent name="C:\python_project\portfoliobox\templates\email" />
-      <recent name="C:\python_project\portfoliobox\registration\email" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\python_project\portfoliobox\static\css" />
       <recent name="C:\python_project\portfoliobox\templates\portfolio" />
       <recent name="C:\python_project\portfoliobox\templates\registration" />
       <recent name="C:\python_project\portfoliobox" />
       <recent name="C:\python_project\portfoliobox\registration" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\python_project\portfoliobox\templates\portfolio" />
+      <recent name="C:\python_project\portfoliobox\templates\registration" />
+      <recent name="C:\python_project\portfoliobox\static" />
+      <recent name="C:\python_project\portfoliobox\templates\email" />
+      <recent name="C:\python_project\portfoliobox\registration\email" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.portfoliobox">
@@ -1179,16 +1179,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/rs-plugin/css/settings-ie8.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="501" column="37" selection-start-line="501" selection-start-column="37" selection-end-line="501" selection-end-column="37" />
+        <state relative-caret-position="372">
+          <caret line="809" column="58" selection-start-line="809" selection-start-column="47" selection-end-line="809" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/rs-plugin/css/settings.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="725" column="17" selection-start-line="725" selection-start-column="17" selection-end-line="725" selection-end-column="17" />
+        <state relative-caret-position="193">
+          <caret line="1754" column="62" selection-start-line="1754" selection-start-column="62" selection-end-line="1754" selection-end-column="62" />
           <folding />
         </state>
       </provider>

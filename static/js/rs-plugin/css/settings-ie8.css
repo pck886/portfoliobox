@@ -498,7 +498,7 @@ website:   	http://www.themepunch.com
 .tp-simpleresponsive .slotholder *,
 .tp-simpleresponsive img			{ -webkit-transform: translateZ(0);
 										  -webkit-backface-visibility: hidden;
-										  /*-webkit-perspective: 1000;*/
+										  -webkit-perspective: 1000;
 									}
 
 
@@ -807,7 +807,7 @@ website:   	http://www.themepunch.com
 			}
 
 
-.tp-transparentimg {	content:"url(../assets/transparent.png)"}
+.tp-transparentimg {	content:"url(../assets/transparent.jpg)"}
 .tp-3d				{	-webkit-transform-style: preserve-3d;
 						 -webkit-transform-origin: 50% 50%;
 					}
