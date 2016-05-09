@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49f8312f-a60f-493d-8ee8-f3b14562a465" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/style.blue.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/portfolio/portfolio.html" afterPath="$PROJECT_DIR$/templates/portfolio/portfolio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/owl.theme.css" afterPath="$PROJECT_DIR$/static/css/owl.theme.css" />
     </list>
     <ignored path="portfoliobox.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,16 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfoliobox/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio/backends/default/urls.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,11 +61,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="portfolio.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="portfolio.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/portfolio/portfolio.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
               <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="owl.theme.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/owl.theme.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -142,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/registration/auth_url.py" />
         <option value="$PROJECT_DIR$/registration/backends/default/url.py" />
         <option value="$PROJECT_DIR$/templates/registration/signup_ok.html" />
         <option value="$PROJECT_DIR$/registration/urls.py" />
@@ -193,6 +191,7 @@
         <option value="$PROJECT_DIR$/static/js/rs-plugin/css/settings.css" />
         <option value="$PROJECT_DIR$/static/css/style.green.css" />
         <option value="$PROJECT_DIR$/templates/portfolio/portfolio.html" />
+        <option value="$PROJECT_DIR$/static/css/owl.theme.css" />
       </list>
     </option>
   </component>
@@ -294,24 +293,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="portfoliobox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="portfoliobox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -350,18 +331,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\python_project\portfoliobox\static\css" />
       <recent name="C:\python_project\portfoliobox\static\fancyBox" />
       <recent name="C:\python_project\portfoliobox\static\css\fancyBox" />
-      <recent name="C:\python_project\portfoliobox\static\css" />
       <recent name="C:\python_project\portfoliobox\templates\portfolio" />
       <recent name="C:\python_project\portfoliobox\templates\registration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\python_project\portfoliobox\static\css" />
       <recent name="C:\python_project\portfoliobox\templates\portfolio" />
       <recent name="C:\python_project\portfoliobox\templates\registration" />
       <recent name="C:\python_project\portfoliobox\static" />
       <recent name="C:\python_project\portfoliobox\templates\email" />
-      <recent name="C:\python_project\portfoliobox\registration\email" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.portfoliobox">
@@ -734,22 +715,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/registration/registration_complete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/registration_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/registration/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1125,6 +1090,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/ajax-loader.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/owl.theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
           <folding />
         </state>
       </provider>
