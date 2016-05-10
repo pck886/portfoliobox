@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49f8312f-a60f-493d-8ee8-f3b14562a465" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfoliobox/wsgi.py" afterPath="$PROJECT_DIR$/portfoliobox/wsgi.py" />
     </list>
     <ignored path="portfoliobox.iws" />
@@ -103,11 +102,9 @@
       <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/portfoliobox/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-              <folding>
-                <element signature="e#227#240#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="266">
+              <caret line="14" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1006,11 +1003,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/portfoliobox/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-          <folding>
-            <element signature="e#227#240#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="266">
+          <caret line="14" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
