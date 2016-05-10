@@ -11,6 +11,8 @@ import dj_database_url
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from django.conf.global_settings import DATABASES
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -82,12 +84,14 @@ WSGI_APPLICATION = 'portfoliobox.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+DATABASES['default'] = dj_database_url.config(default='postgres://uvsbtoyybebhjd:c4OdA3C3a0OlZEA1mqo8scYK3v@ec2-23-21-255-14.compute-1.amazonaws.com:5432/dcg67ar20ht1hd')
 
 # User model
 AUTH_USER_MODEL = 'auth.User'
