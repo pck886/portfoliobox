@@ -195,10 +195,10 @@ REGISTRATION_AUTO_LOGIN = False
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'pck886@naver.com'
+DEFAULT_FROM_EMAIL = '@naver.com'
 EMAIL_HOST = 'smtp.naver.com'
-EMAIL_HOST_USER = 'pck886'
-EMAIL_HOST_PASSWORD = 'cksrudQhd8724'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
