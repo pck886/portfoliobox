@@ -308,39 +308,39 @@ class RegistrationProfile(models.Model):
 
         if request is not None:
             ctx_dict = RequestContext(request, ctx_dict)
-            """ RequestContext 후 업데이트 ctx_dict가 만들어집니다
-              템플릿 상황에 맞는 프로세서 때문에
-              사용자와 같은 값의 일부를 덮어 쓸 수 있습니다
-              django.contrib.auth.context_processors.auth를 사용"""
-            ctx_dict.update({
-                'user': self.user,
-                'activation_key': self.activation_key,
-                'expiration_days': settings.ACCOUNT_ACTIVATION_DAYS,
-                'site': site,
-            })
-            subject = (getattr(settings, 'REGISTRATION_EMAIL_SUBJECT_PREFIX', '') +
-                       render_to_string(
-                           activation_email_subject, ctx_dict))
-            # Email subject *must not* contain newlines
-            subject = ''.join(subject.splitlines())
-            from_email = getattr(settings, 'REGISTRATION_DEFAULT_FROM_EMAIL',
-                                 settings.DEFAULT_FROM_EMAIL)
-            message_txt = render_to_string(activation_email_body,
-                                           ctx_dict)
+        """ RequestContext 후 업데이트 ctx_dict가 만들어집니다
+          템플릿 상황에 맞는 프로세서 때문에
+          사용자와 같은 값의 일부를 덮어 쓸 수 있습니다
+          django.contrib.auth.context_processors.auth를 사용"""
+        ctx_dict.update({
+            'user': self.user,
+            'activation_key': self.activation_key,
+            'expiration_days': settings.ACCOUNT_ACTIVATION_DAYS,
+            'site': site,
+        })
+        subject = (getattr(settings, 'REGISTRATION_EMAIL_SUBJECT_PREFIX', '') +
+                   render_to_string(
+                       activation_email_subject, ctx_dict))
+        # Email subject *must not* contain newlines
+        subject = ''.join(subject.splitlines())
+        from_email = getattr(settings, 'REGISTRATION_DEFAULT_FROM_EMAIL',
+                             settings.DEFAULT_FROM_EMAIL)
+        message_txt = render_to_string(activation_email_body,
+                                       ctx_dict)
 
-            email_message = EmailMultiAlternatives(subject, message_txt,
-                                                   from_email, [self.user.email])
+        email_message = EmailMultiAlternatives(subject, message_txt,
+                                               from_email, [self.user.email])
 
-            if getattr(settings, 'REGISTRATION_EMAIL_HTML', True):
-                try:
-                    message_html = render_to_string(
-                        activation_email_html, ctx_dict)
-                except TemplateDoesNotExist:
-                    pass
-                else:
-                    email_message.attach_alternative(message_html, 'text/html')
+        if getattr(settings, 'REGISTRATION_EMAIL_HTML', True):
+            try:
+                message_html = render_to_string(
+                    activation_email_html, ctx_dict)
+            except TemplateDoesNotExist:
+                pass
+            else:
+                email_message.attach_alternative(message_html, 'text/html')
 
-            email_message.send()
+        email_message.send()
 
 
 

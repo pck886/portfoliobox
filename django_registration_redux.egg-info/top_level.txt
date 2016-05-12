@@ -1,0 +1,6 @@
+common
+notice
+portfolio
+portfoliobox
+registration
+tests
