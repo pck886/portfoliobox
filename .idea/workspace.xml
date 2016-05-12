@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49f8312f-a60f-493d-8ee8-f3b14562a465" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/registration/tests.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/registration/management/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/registration/management/commands/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/registration/management/commands/cleanupregistration.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/registration/tests/default_backend_test.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/registration/forms.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfoliobox/settings.py" afterPath="$PROJECT_DIR$/portfoliobox/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registration/models.py" afterPath="$PROJECT_DIR$/registration/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registration/users.py" afterPath="$PROJECT_DIR$/registration/users.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registration/tests/models_tests.py" afterPath="$PROJECT_DIR$/registration/tests/models_tests.py" />
     </list>
     <ignored path="portfoliobox.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +29,7 @@
     <SUITE FILE_PATH="coverage/portfoliobox$Test__tests.coverage" NAME="Test: tests Coverage Results" MODIFIED="1462945526389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/portfoliobox$Unittests_in_setup__3_.coverage" NAME="Unittests in setup (3) Coverage Results" MODIFIED="1462856057424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/portfoliobox$task.coverage" NAME="task Coverage Results" MODIFIED="1462856174382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/portfoliobox$tests.coverage" NAME="tests Coverage Results" MODIFIED="1463015675953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/registration/tests" />
+    <SUITE FILE_PATH="coverage/portfoliobox$tests.coverage" NAME="tests Coverage Results" MODIFIED="1463042410386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/registration/tests" />
     <SUITE FILE_PATH="coverage/portfoliobox$Unnamed.coverage" NAME="tests Coverage Results" MODIFIED="1462957880705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/registration/tests" />
     <SUITE FILE_PATH="coverage/portfoliobox$Test__tests_AdminCustomActionsTestCase.coverage" NAME="Test: tests.AdminCustomActionsTestCase Coverage Results" MODIFIED="1462866467602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/portfoliobox$Unittests_in_setup__2_.coverage" NAME="Unittests in setup (2) Coverage Results" MODIFIED="1462855735722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -41,7 +44,30 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="DockManager">
+    <window id="3">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/registration/models.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="377">
+                    <caret line="316" column="30" selection-start-line="316" selection-start-column="30" selection-end-line="316" selection-end-column="30" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\python_project\covered" />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="portfoliobox" />
   </component>
@@ -50,44 +76,10 @@
       <file leaf-file-name="models_tests.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/registration/tests/models_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="147" column="45" selection-start-line="147" selection-start-column="45" selection-end-line="147" selection-end-column="45" />
+            <state relative-caret-position="95">
+              <caret line="266" column="43" selection-start-line="266" selection-start-column="43" selection-end-line="266" selection-end-column="43" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registration/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="81" column="56" selection-start-line="81" selection-start-column="56" selection-end-line="81" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_actions_tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registration/tests/admin_actions_tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/portfoliobox/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1273">
-              <caret line="68" column="59" selection-start-line="68" selection-start-column="59" selection-end-line="68" selection-end-column="59" />
-              <folding>
-                <element signature="e#332#354#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/email/activation_email.html" />
         <option value="$PROJECT_DIR$/templates/email/activation_email_body.txt" />
         <option value="$PROJECT_DIR$/templates/email/activation_email_subject.txt" />
         <option value="$PROJECT_DIR$/templates/registration/email/activation_email.txt" />
@@ -158,10 +149,11 @@
         <option value="$PROJECT_DIR$/tests/admin_actions.py" />
         <option value="$PROJECT_DIR$/registration/tests/__init__.py" />
         <option value="$PROJECT_DIR$/portfoliobox/settings.py" />
-        <option value="$PROJECT_DIR$/registration/models.py" />
         <option value="$PROJECT_DIR$/registration/tests/admin_actions_tests.py" />
-        <option value="$PROJECT_DIR$/registration/tests/models_tests.py" />
+        <option value="$PROJECT_DIR$/registration/tests/default_backend_tests.py" />
         <option value="$PROJECT_DIR$/portfoliobox/settings_test.py" />
+        <option value="$PROJECT_DIR$/registration/tests/models_tests.py" />
+        <option value="$PROJECT_DIR$/registration/models.py" />
       </list>
     </option>
   </component>
@@ -172,10 +164,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -292,7 +284,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/registration/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../covered" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -300,19 +292,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\python_project\portfoliobox\registration\tests" />
+      <recent name="C:\python_project\portfoliobox\registration" />
+      <recent name="C:\python_project\portfoliobox\tests" />
+      <recent name="C:\python_project\portfoliobox" />
+      <recent name="C:\python_project\portfoliobox\static\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\python_project\portfoliobox\registration" />
       <recent name="C:\python_project\portfoliobox\static\css" />
       <recent name="C:\python_project\portfoliobox\static\fancyBox" />
       <recent name="C:\python_project\portfoliobox\static\css\fancyBox" />
       <recent name="C:\python_project\portfoliobox\templates\portfolio" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\python_project\portfoliobox\tests" />
-      <recent name="C:\python_project\portfoliobox" />
-      <recent name="C:\python_project\portfoliobox\static\css" />
-      <recent name="C:\python_project\portfoliobox\templates\portfolio" />
-      <recent name="C:\python_project\portfoliobox\templates\registration" />
     </key>
   </component>
   <component name="RunManager" selected="Django tests.tests">
@@ -641,39 +633,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests - 2016.05.12 at 09h 53m 56s.xml">
+    <history-entry file="tests - 2016.05.12 at 17h 11m 31s.xml">
       <configuration name="tests" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2016.05.12 at 09h 54m 58s.xml">
+    <history-entry file="tests - 2016.05.12 at 17h 12m 04s.xml">
       <configuration name="tests" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2016.05.12 at 09h 58m 14s.xml">
+    <history-entry file="tests - 2016.05.12 at 17h 12m 27s.xml">
       <configuration name="tests" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2016.05.12 at 10h 00m 25s.xml">
+    <history-entry file="tests - 2016.05.12 at 17h 12m 38s.xml">
       <configuration name="tests" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2016.05.12 at 10h 01m 58s.xml">
+    <history-entry file="tests - 2016.05.12 at 17h 13m 31s.xml">
       <configuration name="tests" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2016.05.12 at 10h 02m 08s.xml">
+    <history-entry file="tests - 2016.05.12 at 17h 14m 57s.xml">
       <configuration name="tests" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2016.05.12 at 10h 08m 51s.xml">
+    <history-entry file="tests - 2016.05.12 at 17h 35m 11s.xml">
       <configuration name="tests" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2016.05.12 at 10h 12m 03s.xml">
+    <history-entry file="tests - 2016.05.12 at 17h 37m 49s.xml">
       <configuration name="tests" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2016.05.12 at 10h 13m 23s.xml">
+    <history-entry file="tests - 2016.05.12 at 17h 39m 43s.xml">
       <configuration name="tests" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
-    <history-entry file="tests - 2016.05.12 at 10h 14m 36s.xml">
+    <history-entry file="tests - 2016.05.12 at 17h 42m 10s.xml">
       <configuration name="tests" configurationId="DjangoTestsConfigurationType" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17963752" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -682,17 +674,17 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26623377" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26556018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28304905" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41883117" sideWeight="0.49555555" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41804978" sideWeight="0.49555555" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="1060" y="100" width="760" height="840" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2478355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -751,8 +743,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/registration/models.py</url>
-          <line>320</line>
-          <option name="timeStamp" value="175" />
+          <line>310</line>
+          <option name="timeStamp" value="189" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -765,12 +757,14 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="176" />
+      <option name="time" value="190" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="DjangoTestsConfigurationType">
         <watch expression="Site.objects.get_current()" language="Python" />
         <watch expression="Site" language="Python" />
+        <watch expression="six.text_type" language="Python" />
+        <watch expression="six.text_type('str')" language="Python" />
       </configuration>
       <configuration name="Python.DjangoServer">
         <watch expression="settings.INSTALLED_APPS" language="Python" />
@@ -778,39 +772,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/img/home.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile.windows">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="44" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style.green.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -873,6 +834,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
           <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -907,13 +869,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_app/simple_backend.py" />
     <entry file="file://$PROJECT_DIR$/test_app/models.py" />
-    <entry file="file://$PROJECT_DIR$/portfoliobox/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_app/default_backend.py" />
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -953,13 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portfoliobox/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -986,13 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portfoliobox/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/importlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
@@ -1014,14 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="319" column="0" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/test/client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1040,16 +973,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="1511" column="0" selection-start-line="1511" selection-start-column="0" selection-end-line="1511" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfoliobox/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1273">
-          <caret line="68" column="59" selection-start-line="68" selection-start-column="59" selection-end-line="68" selection-end-column="59" />
-          <folding>
-            <element signature="e#332#354#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,43 +984,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registration/admin.py">
+    <entry file="file://$PROJECT_DIR$/registration/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="-969">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registration/models.py">
+    <entry file="file://$PROJECT_DIR$/registration/management/commands/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="81" column="56" selection-start-line="81" selection-start-column="56" selection-end-line="81" selection-end-column="56" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="328" column="0" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfoliobox/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfoliobox/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2527">
+          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding>
+            <element signature="e#332#354#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/registration/tests/admin_actions_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="117">
+          <caret line="65" column="64" selection-start-line="65" selection-start-column="64" selection-end-line="65" selection-end-column="64" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/registration/signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registration/tests/default_backend_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="84" column="70" selection-start-line="84" selection-start-column="70" selection-end-line="84" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registration/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registration/backends/default/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfoliobox/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfoliobox/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/portfoliobox/settings_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
+        <state relative-caret-position="535">
           <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registration/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="316" column="30" selection-start-line="316" selection-start-column="30" selection-end-line="316" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/registration/tests/models_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="147" column="45" selection-start-line="147" selection-start-column="45" selection-end-line="147" selection-end-column="45" />
+        <state relative-caret-position="95">
+          <caret line="266" column="43" selection-start-line="266" selection-start-column="43" selection-end-line="266" selection-end-column="43" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

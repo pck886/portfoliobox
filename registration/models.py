@@ -9,6 +9,7 @@ from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
 from django.core.mail import EmailMultiAlternatives
 from django.db import models, transaction
+from django.shortcuts import render
 from django.template import RequestContext, TemplateDoesNotExist
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
@@ -29,17 +30,17 @@ class RegistrationManager(models.Manager):
     """
     def activate_user(self, activation_key, get_profile=False):
         """
-        Validate an activation key and activate the corresponding
-        ``User`` if valid.
-        If the key is valid and has not expired, return the ``User``
-        after activating.
-        If the key is not valid or has expired, return ``False``.
-        If the key is valid but the ``User`` is already active,
-        return ``User``.
-        If the key is valid but the ``User`` is inactive, return ``False``.
-        To prevent reactivation of an account which has been
-        deactivated by site administrators, ``RegistrationProfile.activated``
-        is set to ``True`` after successful activation.
+        대응을 활성화 키를 확인하고 활성화
+         ``User`` 경우 유효합니다.
+         열쇠가 유효하고 만료되지 않은 경우,``User``를 반환
+         활성화 후.
+         키가 유효하지 않거나 만료 된 경우,``False``를 반환합니다.
+         키가 유효하지만은``User``이 이미 활성화되어있는 경우,
+         ``User``를 반환합니다.
+         키는 유효하지만``User``가 비활성 상태, 반환``False``합니다.
+         된 계정의 재 활성화를 방지하기 위해
+         RegistrationProfile.activated````, 사이트 관리자에 의해 비활성화
+         성공적으로 활성화 한 후 True````로 설정됩니다.
         """
         # Make sure the key we're trying conforms to the pattern of a
         # SHA1 hash; if it doesn't, no point trying to look it up in
@@ -308,10 +309,10 @@ class RegistrationProfile(models.Model):
 
         if request is not None:
             ctx_dict = RequestContext(request, ctx_dict)
-        """ RequestContext 후 업데이트 ctx_dict가 만들어집니다
-          템플릿 상황에 맞는 프로세서 때문에
-          사용자와 같은 값의 일부를 덮어 쓸 수 있습니다
-          django.contrib.auth.context_processors.auth를 사용"""
+        # RequestContext 후 업데이트 ctx_dict가 만들어집니다
+        # 템플릿 상황에 맞는 프로세서 때문에
+        # 사용자와 같은 값의 일부를 덮어 쓸 수 있습니다
+        # django.contrib.auth.context_processors.auth를 사용
         ctx_dict.update({
             'user': self.user,
             'activation_key': self.activation_key,
@@ -344,16 +345,11 @@ class RegistrationProfile(models.Model):
 
 
 
-def get_or_none(model, order=None, **kwargs):
+def get_or_none(model, **kwargs):
     try:
         return model.objects.get(**kwargs)
     except MultipleObjectsReturned as e:
-        if order == "-":
-            res = model.objects.filter(**kwargs).order_by("-id")
-        else:
-            res = model.objects.filter(**kwargs).order_by("-id")
-        if res:
-            return res[0]
-        return None
+        res = model.objects.filter(**kwargs).order_by("-id")
+        return res[0]
     except Exception as e:
         return None
