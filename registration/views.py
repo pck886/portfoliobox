@@ -49,8 +49,6 @@ class RegistrationView(TemplateView):
         else:
             return redirect(to, *args, **kwargs)
 
-        return super(RegistrationView, self).dispatch(request, *args, **kwargs)
-
     def registration_allowed(self):
         """
         Override this to enable/disable user registration, either

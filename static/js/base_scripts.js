@@ -164,7 +164,8 @@ $(document).ready(function() {
 
     // appMaster.smoothScroll();
     //
-    // appMaster.reviewsCarousel();
+    // 슬라이드 리뷰
+    appMaster.reviewsCarousel();
 
     // 스크린샷
     appMaster.screensCarousel();

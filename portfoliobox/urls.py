@@ -48,4 +48,8 @@ urlpatterns = [
     url(r'^admin/',
         include(admin.site.urls),
         name='admin'),
+
+    url(r'^edu/',
+        TemplateView.as_view(template_name='edupot/edupot.html'),
+        name='edu'),
 ]
