@@ -52,4 +52,8 @@ urlpatterns = [
     url(r'^edu/',
         TemplateView.as_view(template_name='edupot/edupot.html'),
         name='edu'),
+
+    url(r'^yaja/',
+        TemplateView.as_view(template_name='yaja/index.html'),
+        name='yaja'),
 ]
